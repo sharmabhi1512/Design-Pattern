@@ -1,0 +1,83 @@
+What is design pattern?
+We need to have 3 things, Best Practices, Problems and Solution for those problems.
+A Design pattern helps us find the recurring problem and provides it's readymade solution.
+If we want to limit the creation of a no of object which is 1 of a particular class, No matter how many times we use that class in our app,
+so we use Singleton Design Pattern to implement this.
+Or in a different word. Design pattern is readymade solution of a problem in a given context.
+
+Why Design Pattern?
+1:) Capture design Solution-> Identify the problem, Document them, Brainstorm multiple Solution, Select the design of a Solution
+2:) Promote Reuse -> Reuse the solution across project for a same problem
+3:) Better System design Structure -> 
+4:) Common Design Language ->
+
+
+How to select which design Pattern?
+
+
+What is Pattern Catalog?
+
+
+We have 2 main pattern catalog.
+1:) GOF(Group Of Four)/Core Pattern Catalog
+2:) JEE Pattern Catalog
+
+
+What is Core Pattern?
+Core Pattern can be further sub devided into
+1:) Creational Pattern-> It provides a guidlines to instanciate a single or group of object.
+2:) Structural Pattern-> It provides a manner to define a relationships b/w the class.
+3:) Behavioral Pattern-> How communication should happen b/w classes and objects
+
+What is J2EE Pattern?
+We have multiple stages under which different design patterns comes.
+1:)Presentation Layer -> Intercepting Filter, Front Controller, MVC, Context Object etc. 
+2:)Integration Layer -> Service Activator, Web Service Broker Design patterns comes under this layer
+3:)Service/Presentation Layer -> Business Object, Transfer Object, Session Facade, Service Locator 
+4:)DAO Layer -> Data Access Object 
+
+
+What is Singleton Class?
+Only one insance of a class can be created which will be shared amount other classes which wants to use this object.
+Example of Singleton class
+Property reader is a singleton class which is used to read from a single file.
+Logger class is a singleton class which is used to log in different class.
+Data Source class is a singleton class.
+
+When to use Eager Initialization?
+Eager initialization we can use when we know that it is being used atleast once. Preferable Lazy Initialization being used more.
+
+
+What happence in case of Multithreaded environment?
+We need to make sure our singleton class is threadsafe.To do that we can mark the method as synchronized which is being used to create an object or
+we can have synchronized block and apply class or object level lock with in the method.
+
+
+How Deserialization can break Sigleton.
+After creating an object when we serialize/save the object into any file, when we deserialize the object and then when we read that object to compare,
+while comparing both the object we find both object are different. To avoid this we can override the method called readResolve inside Singleton
+class where we can return the same object. Return type of this method should be private or protected if we want child class to override this 
+functionality.
+
+
+How Clone method can break Singleton?
+Any class can use clone method to break this pattern to Avoid this, After implementing cloan method of Cloanable interface, We can return 
+CloneNotSupportedException from the method.
+
+
+What is Reflection Problem with Singleton?
+We can use Reflection mechanism to break singleton design pattern. We can access the constructor of a singletone class by calling a 
+getDeclaredConstructor method on a singleton class then set a constructor accessible true and use a newInstance method to create a new instance. When
+we compare the hashcode of both the object it will be different.
+To fix this we can use ENUM because we don't have any constructor in ENUM. We can define a field which will represent a instance of the object.
+
+
+
+
+What is Factory Design Pattern?
+It hides a object creation process. 
+
+
+
+
+
