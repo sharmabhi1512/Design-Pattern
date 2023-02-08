@@ -96,5 +96,13 @@ When to use it?
 When a subclass doesn't know what subclass will be required to create?
 
 
+What is an Abstract factory Design pattern?
+Factory of factories. It hides the creation of a factory.
+Example:
+JAXP: Java API for XML Parsing.
+DAOFactory
+
+ 
+
 
 
